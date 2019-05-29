@@ -1,0 +1,8 @@
+.CoverFigure {
+  width: 100%!important;
+  height: 100%!important;
+}
+.CoverFigure img {
+  width: 100%!important;
+  max-height: 100%!important;
+}

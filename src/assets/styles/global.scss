@@ -1,0 +1,56 @@
+@import 'reset';
+
+
+$fontSize:37.5;
+
+@function px2rem($px) {
+    @return ($px /$fontSize) +rem;
+}
+
+
+@mixin center(){
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.icon{
+  color:#333;
+  font-size: px2rem(20);
+  padding: 0 px2rem(10);
+}
+
+/*动画*/
+.silde-down-enter,.silde-down-leave-to{
+transform: translate3d(0,px2rem(-108),0)
+}
+.silde-down-enter-to,.silde-down-leave{
+transform: translate3d(0,0,0)
+}
+.silde-down-enter-active,.silde-down-leave-active{
+transition: all .3s linear;
+}
+
+.silde-up-enter,.silde-up-leave-to{
+    transform: translate3d(0,px2rem(108),0)
+}
+.silde-up-enter-to,.silde-up-leave{
+  transform: translate3d(0,0,0)
+}
+.silde-up-enter-active,.silde-up-leave-active{
+  transition: all .3s linear;
+}
+
+.fade-enter,.fade-leave-to{
+  opacity: 0;
+}
+.fade-enter-to,.fade-leave{
+  opacity: 1;
+}
+
+
+.silde-right-enter,.silde-right-leave-to{
+  transform: translate3d(-100%, 0, 0)
+}
+.silde-right-enter-active,.silde-right-leave-active{
+transition: all .2s linear;
+}
